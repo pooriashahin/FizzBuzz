@@ -4,35 +4,43 @@ namespace Kata;
 
 class Index
 {
-    public function handle(): bool
+    public function handle($number): bool
     {
         return true;
     }
     
-    public function printOneToHundred(){
+    public function replaceFactorOfThree($number){
 
-        for($number=1; $number<=100; $number++){
+        if ($number%3 === 0){
 
-            if($number%15 === 0){
-                echo "FIZZBUZZ <br>";
-                continue;
-            }
-            if($number%3 === 0){
-                echo "FIZZ <br>";
-                continue;
-            }
-            if($number%5 === 0){
-                echo "BUZZ <br>";
-                continue;
-            }
-            echo "$number<br>";
+            return $number = "FIZZ";
         }
-    
     }
- 
+
+    public function replaceFactorOfFive($number){
+
+        if ($number%5 === 0){
+
+            return $number = "BUZZ";
+        }
+    }
+
+    
+    public function replaceFactorOfThreeAndFive($number){
+
+        if ($number%3 === 0 && $number%5 === 0){
+
+            return $number = "FIZZBUZZ";
+        }
+    }
+    
 }
 
-$numbers = new Index();
-$numbers->printOneToHundred();
+for($number=1; $number<=100; $number++){
+    
+    echo "$number<br>";
+    }
+
+   $numbers = new index();
 
 
