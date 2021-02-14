@@ -9,23 +9,23 @@ class Fizzbuzz
         return true;
     }
 
-    public function printNumber($a){
+    public function printNumber($number){
 
-        if ($a%3 !== 0 && $a%5 !== 0){
-            return $a;
+        if ($number%3 !== 0 && $number%5 !== 0){
+            return $number;
         }    
     }
     
-    public function replaceFactorOfThree($a){
+    public function replaceFactorOfThree($number){
 
-        if ($a %3 === 0){
+        if ($number %3 === 0){
             return "FIZZ";
         }
     }
 
-    public function replaceFactorOfFive($a){
+    public function replaceFactorOfFive($number){
 
-        if ($a %5 === 0){
+        if ($number %5 === 0){
             return "BUZZ";
         }
     }
