@@ -3,9 +3,11 @@
 namespace Kata;
 include "index.php";
 
+$i = new Fizzbuzz();
+
 for($number=1; $number<=100; $number++){
 
-    $i = new Fizzbuzz();
+    
     
     $i->printNumber($number);
     $i->replaceFactorOfThree($number);
