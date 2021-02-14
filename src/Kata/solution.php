@@ -5,11 +5,11 @@ include "index.php";
 
 $i = new Fizzbuzz();
 
-for($number=1; $number<=100; $number++){
+    for($number=1; $number<=100; $number++){
 
-    $i->printNumber($number);
-    $i->replaceFactorOfThree($number);
-    $i->replaceFactorOfFive($number);
-    $i->replaceFactorOfThreeAndFive($number);
+    echo $i->printNumber($number);
+    echo $i->replaceFactorOfThree($number);
+    echo $i->replaceFactorOfFive($number);
+    echo "<br>";
     
     }

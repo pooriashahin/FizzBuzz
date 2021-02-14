@@ -10,36 +10,23 @@ class Fizzbuzz
     }
 
     public function printNumber($a){
-        
-        if ($a%3 !== 0 && $a%5 !== 0){
 
-        echo "$a<br>";
+        if ($a%3 !== 0 && $a%5 !== 0){
+            return $a;
         }    
     }
     
     public function replaceFactorOfThree($a){
 
-        if ($a %3 === 0 && $a%5 !== 0){
-
-            echo "FIZZ<br>";
+        if ($a %3 === 0){
+            return "FIZZ";
         }
     }
 
     public function replaceFactorOfFive($a){
 
-        if ($a %5 === 0 && $a%3 !== 0){
-
-            echo "BUZZ<br>";
+        if ($a %5 === 0){
+            return "BUZZ";
         }
     }
-
-    
-    public function replaceFactorOfThreeAndFive($a){
-
-        if ($a%3 === 0 && $a%5 === 0){
-
-            echo "FIZZBUZZ<br>";
-        }
-    }
-    
 }
