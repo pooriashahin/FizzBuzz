@@ -2,45 +2,44 @@
 
 namespace Kata;
 
-class Index
+class Fizzbuzz
 {
-    public function handle($number): bool
+    public function handle(): bool
     {
         return true;
     }
+
+    public function printNumber($a){
+        
+        if ($a%3 !== 0 && $a%5 !== 0){
+
+        echo "$a<br>";
+        }    
+    }
     
-    public function replaceFactorOfThree($number){
+    public function replaceFactorOfThree($a){
 
-        if ($number%3 === 0){
+        if ($a %3 === 0 && $a%5 !== 0){
 
-            return $number = "FIZZ";
+            echo "FIZZ<br>";
         }
     }
 
-    public function replaceFactorOfFive($number){
+    public function replaceFactorOfFive($a){
 
-        if ($number%5 === 0){
+        if ($a %5 === 0 && $a%3 !== 0){
 
-            return $number = "BUZZ";
+            echo "BUZZ<br>";
         }
     }
 
     
-    public function replaceFactorOfThreeAndFive($number){
+    public function replaceFactorOfThreeAndFive($a){
 
-        if ($number%3 === 0 && $number%5 === 0){
+        if ($a%3 === 0 && $a%5 === 0){
 
-            return $number = "FIZZBUZZ";
+            echo "FIZZBUZZ<br>";
         }
     }
     
 }
-
-for($number=1; $number<=100; $number++){
-    
-    echo "$number<br>";
-    }
-
-   $numbers = new index();
-
-
