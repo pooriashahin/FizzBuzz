@@ -31,12 +31,13 @@ class NumberObject
             return self::BUZZ;
         }
 
-        return (string) $number;
+            return (string) $number;
     }
 
     private function isDivisibleBy3And5($number): bool
     {
-        return $this->isDivisibleBy3($number) && $this->isDivisibleBy5($number);
+        return  $this->isDivisibleBy3($number) && 
+                $this->isDivisibleBy5($number);
     }
 
     private function isDivisibleBy3($number): bool
