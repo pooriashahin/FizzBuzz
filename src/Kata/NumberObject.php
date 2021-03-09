@@ -14,7 +14,7 @@ class NumberObject
         $this->value = $number;
     }
 
-    public function ifDivisibleBy3Or5Or3And5orNot()
+    public function ifDivisibleBy3Or5Or3And5OrNot()
     {
         if ($this->value % 3 === 0 && $this->value % 5 === 0) 
         {
