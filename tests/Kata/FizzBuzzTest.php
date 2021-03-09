@@ -13,95 +13,65 @@ class FizzBuzzTest extends TestCase
         $this->fizzBuzz = new FizzBuzz();
     }
   
-    public function testNumber1returnstring1(): void
+    public function testNumber1ReturnsString1(): void
     {
-        $expected= '1';
-        $actual = $this->fizzBuzz->handle(new NumberObject(1));
-        $this->assertSame($actual, $expected);
-    }
-      
-    public function testNumber2returnstring2(): void
-    {
-        $expected= '2';
-        $actual = $this->fizzBuzz->handle(new NumberObject(2));
+        $this->number = new NumberObject('1');
+        $actual = $this->number->ifDivisibleBy3Or5Or3And5orNot();
+        $expected = 1;
         $this->assertSame($actual, $expected);
     }
 
-    public function testNumber4returnstring4(): void
+    public function testNumber2ReturnsString2(): void
     {
-        $expected= '4';
-        $actual = $this->fizzBuzz->handle(new NumberObject(4));
+        $this->number = new NumberObject('2');
+        $actual = $this->number->ifDivisibleBy3Or5Or3And5orNot();
+        $expected = 2;
         $this->assertSame($actual, $expected);
     }
 
-    public function testNumber98returnstring98(): void
+    public function testNumber98ReturnsString98(): void
     {
-        $expected= '98';
-        $actual = $this->fizzBuzz->handle(new NumberObject(98));
+        $this->number = new NumberObject('98');
+        $actual = $this->number->ifDivisibleBy3Or5Or3And5orNot();
+        $expected = 98;
         $this->assertSame($actual, $expected);
     }
 
-    public function testNumber3returnstringFizz(): void
+    public function testNumber3ReturnsStringFizz(): void
     {
-        $expected= 'Fizz';
-        $actual = $this->fizzBuzz->handle(new NumberObject(3));
+        $this->number = new NumberObject('3');
+        $actual = $this->number->ifDivisibleBy3Or5Or3And5orNot();
+        $expected = 'Fizz';
         $this->assertSame($actual, $expected);
     }
 
-    public function testNumber6returnstringFizz(): void
+    public function testNumber5ReturnsStringBuzz(): void
     {
-        $expected= 'Fizz';
-        $actual = $this->fizzBuzz->handle(new NumberObject(6));
+        $this->number = new NumberObject('5');
+        $actual = $this->number->ifDivisibleBy3Or5Or3And5orNot();
+        $expected = 'Buzz';
         $this->assertSame($actual, $expected);
     }
 
-    public function testNumber9returnstringFizz(): void
+    public function testNumber95ReturnsStringBuzz(): void
     {
-        $expected= 'Fizz';
-        $actual = $this->fizzBuzz->handle(new NumberObject(9));
+        $this->number = new NumberObject('95');
+        $actual = $this->number->ifDivisibleBy3Or5Or3And5orNot();
+        $expected = 'Buzz';
         $this->assertSame($actual, $expected);
     }
 
-    public function testNumber99returnstringFizz(): void
+    public function testNumber100ReturnsStringBuzz(): void
     {
-        $expected= 'Fizz';
-        $actual = $this->fizzBuzz->handle(new NumberObject(99));
+        $actual = $this->fizzBuzz->returnFizzOrBuzzOrFizzBuzzOrNumber(new NumberObject('95'));
+        $expected = 'Buzz';
         $this->assertSame($actual, $expected);
     }
 
-    public function testNumber5returnstringBuzz(): void
+    public function testNumber15ReturnsStringBuzz(): void
     {
-        $expected= 'Buzz';
-        $actual = $this->fizzBuzz->handle(new NumberObject(5));
+        $actual = $this->fizzBuzz->returnFizzOrBuzzOrFizzBuzzOrNumber(new NumberObject('15'));
+        $expected = 'FizzBuzz';
         $this->assertSame($actual, $expected);
     }
-
-    public function testNumber10returnstringBuzz(): void
-    {
-        $expected= 'Buzz';
-        $actual = $this->fizzBuzz->handle(new NumberObject(10));
-        $this->assertSame($actual, $expected);
-    }
-
-    public function testNumber100returnstringBuzz(): void
-    {
-        $expected= 'Buzz';
-        $actual = $this->fizzBuzz->handle(new NumberObject(100));
-        $this->assertSame($actual, $expected);
-    }
-
-    public function testNumber15returnstringFizzBuzz(): void
-    {
-        $expected= 'FizzBuzz';
-        $actual = $this->fizzBuzz->handle(new NumberObject(15));
-        $this->assertSame($actual, $expected);
-    }
-
-    public function testNumber30returnstringFizzBuzz(): void
-    {
-        $expected= 'FizzBuzz';
-        $actual = $this->fizzBuzz->handle(new NumberObject(30));
-        $this->assertSame($actual, $expected);
-    }
-    
 }

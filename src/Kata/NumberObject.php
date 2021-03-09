@@ -4,52 +4,39 @@ namespace Kata;
 
 class NumberObject
 {   
-    private int $result;
+    private int $value;
     
     Const FIZZ = 'Fizz';
     Const BUZZ = 'Buzz';
 
     public function __construct(int $number)
     {
-        $this->result = $number;
+        $this->value = $number;
     }
 
-    public function toString(): string 
+    public function ifDivisibleBy3Or5Or3And5orNot()
     {
-        if ($this->isDivisibleBy3And5())
+        if ($this->value % 3 === 0 && $this->value % 5 === 0) 
         {
             return self::FIZZ . self::BUZZ;
         }
-
-        if ($this->isDivisibleBy3())
+        
+        if ($this->value % 3 === 0)
         {
             return self::FIZZ;
         }
 
-        if ($this->isDivisibleBy5())
+        if ($this->value % 5 === 0)
         {
             return self::BUZZ;
         }
 
-            return (string) $this->result;
+        return $this->value;
     }
 
-    private function isDivisibleBy3And5(): bool
-    {
-        return  $this->isDivisibleBy3() && 
-                $this->isDivisibleBy5();
-    }
 
-    private function isDivisibleBy3(): bool
-    {
-        return $this->result %3 === 0;
-    }
 
-    private function isDivisibleBy5(): bool
-    {
-        return $this->result %5 === 0;
-    }
-
+    
 }
 
 

@@ -5,9 +5,9 @@ namespace Kata;
 
 class FizzBuzz
 {
-    public function handle(NumberObject $number): string
+    public function returnFizzOrBuzzOrFizzBuzzOrNumber(NumberObject $number): string
     {
-        return $number->toString();
+        return $number->ifDivisibleBy3Or5Or3And5orNot();
     }
 }
 
